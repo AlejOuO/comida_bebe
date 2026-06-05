@@ -1,12 +1,18 @@
+/* ═══════════════════════════════════════════════════════════
+   BOCADITOS FELICES 2.0  —  Tomy's Adventures
+   Design: Dark-emerald editorial · glass morphism · warm light
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Design tokens ──────────────────────────────────────────── */
 :root {
-  /* Dark palette */
+  /* paleta oscura */
   --d-900: #080F0A;
   --d-800: #0D1A10;
   --d-700: #122017;
   --d-600: #1A3025;
   --d-500: #224034;
 
-  /* Green palette */
+  /* paleta verde*/
   --g-800: #1B4D35;
   --g-600: #2D6A4F;
   --g-500: #40916C;
@@ -15,7 +21,7 @@
   --g-100: #D8EFE4;
   --g-50:  #F0FAF4;
 
-  /* Warm palette */
+  /* paleta crema */
   --w-bg:   #FDFAF6;
   --w-bg2:  #F6EFE3;
   --w-bg3:  #EDE3D4;
@@ -30,7 +36,7 @@
   --a-amber-lt: #FEF3E2;
   --a-red:    #C0392B;
 
-  /* Glass card tokens */
+  /* fichas de tarjeta negras*/
   --glass-bg:     rgba(255,255,255,.05);
   --glass-border: rgba(255,255,255,.10);
   --glass-hover:  rgba(255,255,255,.09);
@@ -38,7 +44,7 @@
   --glass-muted:  rgba(255,255,255,.50);
   --glass-subtle: rgba(255,255,255,.30);
 
-  /* Shadows */
+  /* sombras */
   --s-xs: 0 1px 4px rgba(0,0,0,.07);
   --s-sm: 0 4px 14px rgba(0,0,0,.09), 0 1px 4px rgba(0,0,0,.05);
   --s-md: 0 8px 28px rgba(0,0,0,.12), 0 3px 8px rgba(0,0,0,.06);
@@ -48,7 +54,7 @@
   --s-amber: 0 8px 32px rgba(240,160,48,.35);
   --s-glow:  0 0 80px rgba(64,145,108,.20);
 
-  /* Radius */
+  /* Radios */
   --r-xs:  4px;
   --r-sm:  8px;
   --r-md:  14px;
@@ -57,13 +63,13 @@
   --r-2xl: 44px;
   --r-pill:9999px;
 
-  /* Spacing rhythm */
+  /* ritmo de espaciado */
   --sec-py: clamp(5rem, 10vw, 8rem);
 
-  /* Type */
+  /* tipo */
   --font: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 
-  /* Easing */
+  /* suavizado */
   --ease: cubic-bezier(.4,0,.2,1);
   --ease-spring: cubic-bezier(.34,1.56,.64,1);
   --t1: .18s;
@@ -71,7 +77,7 @@
   --t3: .5s;
 }
 
-/* reset*/
+/* reset */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
@@ -89,7 +95,7 @@ a    { color: inherit; text-decoration: none; }
 ul, ol { list-style: none; }
 button { font-family: var(--font); cursor: pointer; border: none; background: none; }
 
-/* container */
+/*container */
 .wrap {
   width: 100%;
   max-width: 1160px;
@@ -97,7 +103,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   padding-inline: clamp(1.25rem, 5vw, 2.5rem);
 }
 
-/* scroll*/
+/* scroll reveal */
 .reveal {
   opacity: 0;
   transform: translateY(32px);
@@ -108,7 +114,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .reveal:nth-child(4) { transition-delay: .24s; }
 .in-view { opacity: 1 !important; transform: translateY(0) !important; }
 
-/* animaciones pagina de entrada */
+/* animacion de pagian de entrada*/
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -139,7 +145,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .hero__visual  { animation: slide-in-right .8s var(--ease) both .3s; }
 .hero__stats-strip { animation: fade-in .8s var(--ease) both 1s; }
 
-/* tipografía del sistema*/
+/* tipografia*/
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -186,7 +192,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   line-height: 1.7;
 }
 
-/*botones */
+/*botones*/
 .btn {
   display: inline-flex;
   align-items: center;
@@ -223,7 +229,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 }
 .btn-hero:hover { box-shadow: 0 12px 52px rgba(0,0,0,.35); }
 
-/* Solution CTA */
+/* solucion CTA */
 .btn-primary {
   font-size: 1rem;
   padding: .9em 2em;
@@ -247,7 +253,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 }
 .btn-cta:hover { box-shadow: 0 14px 48px rgba(240,160,48,.45); }
 
-/* HEADER */
+/*header */
 .header {
   position: sticky;
   top: 0;
@@ -266,18 +272,18 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-block: .150rem;
+  padding-block: .85rem;
 }
 .header__logo img {
-  height: 100px;
+  height: 54px;
   width: auto;
   object-fit: contain;
   opacity: 1;
   transition: opacity var(--t2);
 }
-.header__logo:hover img { opacity: .65; }
+.header__logo:hover img { opacity: .85; }
 
-/* tono esmeralda */
+/* HERO — verde esmeralda oscuro*/
 .hero {
   background: var(--d-800);
   position: relative;
@@ -428,7 +434,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .trust-item svg { color: var(--g-400); flex-shrink: 0; }
 .trust-sep { color: rgba(255,255,255,.2); padding-inline: .6rem; font-size: .8rem; }
 
-/* Visual column */
+/* columna visual */
 .hero__visual { position: relative; }
 .hero__glow {
   position: absolute;
@@ -452,7 +458,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   display: block;
 }
 
-/* Floating glass cards on hero image */
+/* tarjetas de cristal flotantes en la imagen principal */
 .hero__float-card {
   position: absolute;
   display: flex;
@@ -501,7 +507,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   50%      { transform: translateY(-8px); }
 }
 
-/* Stats strip */
+/* staps strips */
 .hero__stats-strip {
   margin-top: clamp(3rem, 6vw, 5rem);
   background: rgba(255,255,255,.03);
@@ -545,9 +551,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   flex-shrink: 0;
 }
 
-/* ═══════════════════════════════════════════
-   PAIN — dark glass cards
-═══════════════════════════════════════════ */
+/* tarjeta de cristal oscura, PAIN*/
 .pain {
   background: var(--d-700);
   padding-block: var(--sec-py);
@@ -656,9 +660,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   line-height: 1.72;
 }
 
-/* ═══════════════════════════════════════════
-   SOLUTION — warm light, organic feel
-═══════════════════════════════════════════ */
+/* solucion, luz calida sensacion organica */
 .solution {
   background: var(--w-bg);
   padding-block: var(--sec-py);
@@ -716,7 +718,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .sol-chip--1 { bottom: 1.5rem; left: -1rem; }
 .sol-chip--2 { top: 1.5rem; right: -1rem; }
 
-/* Copy column */
+/* Copiar columna */
 .solution__copy h2 {
   font-size: clamp(1.8rem, 4vw, 2.7rem);
   font-weight: 900;
@@ -753,9 +755,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 }
 .feature-item strong { font-weight: 700; color: var(--w-ink); }
 
-/* ═══════════════════════════════════════════
-   STAGES — dark glass cards
-═══════════════════════════════════════════ */
+/*escenarios, tarjeta de cristal oscuro*/
 .stages {
   background: var(--d-600);
   padding-block: var(--sec-py);
@@ -879,9 +879,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   opacity: .7;
 }
 
-/* ═══════════════════════════════════════════
-   BONUSES — warm cream with box
-═══════════════════════════════════════════ */
+/* bonificaciones, crema calida con caja*/
 .bonuses {
   background: var(--w-bg2);
   padding-block: var(--sec-py);
@@ -964,9 +962,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   line-height: 1.6;
 }
 
-/* ═══════════════════════════════════════════
-   AUTHORITY — dark glass
-═══════════════════════════════════════════ */
+/*authority cristal oscuro*/
 .authority {
   background: var(--d-800);
   padding-block: var(--sec-py);
@@ -1052,9 +1048,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   color: var(--glass-muted);
 }
 
-/* ═══════════════════════════════════════════
-   FAQ — dark glass (matches visual rhythm)
-═══════════════════════════════════════════ */
+/*faq vidrio oscuro*/
 .faq {
   background: var(--d-700);
   padding-block: var(--sec-py);
@@ -1141,9 +1135,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ═══════════════════════════════════════════
-   CTA FINAL — dramatic dark with glow
-═══════════════════════════════════════════ */
+/* cta final*/
 .cta-final {
   background: var(--d-900);
   padding-block: var(--sec-py);
@@ -1255,9 +1247,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 }
 .cbadge svg { color: var(--g-400); opacity: .7; }
 
-/* ═══════════════════════════════════════════
-   FOOTER
-═══════════════════════════════════════════ */
+/* footer*/
 .footer {
   background: #060D08;
   border-top: 1px solid rgba(255,255,255,.05);
@@ -1287,9 +1277,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 }
 .footer__disclaimer strong { color: rgba(255,255,255,.22); }
 
-/* ═══════════════════════════════════════════
-   RESPONSIVE — Tablet ≤ 940px
-═══════════════════════════════════════════ */
+/*tablet resposivo*/
 @media (max-width: 940px) {
   .hero__wrap {
     grid-template-columns: 1fr;
@@ -1317,9 +1305,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   .authority__visual { max-width: 380px; margin-inline: auto; width: 100%; }
 }
 
-/* ═══════════════════════════════════════════
-   RESPONSIVE — Mobile ≤ 600px
-═══════════════════════════════════════════ */
+/*resposivo*/
 @media (max-width: 600px) {
   :root { --sec-py: 4.5rem; }
 
@@ -1345,9 +1331,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   .cpn-amount { font-size: 3rem; }
 }
 
-/* ═══════════════════════════════════════════
-   REDUCED MOTION
-═══════════════════════════════════════════ */
+/*reducicir motion*/
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: .01ms !important;
